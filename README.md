@@ -8,12 +8,12 @@ This template is curated with the goal of streamlining project setup and promoti
 
 ### Technologies Used
 
-- [Next.js](https://nextjs.org/): A React framework for building server-side rendered and static web applications.
-- [TypeScript](https://www.typescriptlang.org) (`.ts` files): A statically typed superset of JavaScript that enhances code quality and developer productivity.
-- [Tailwind](https://tailwindcss.com) (In prgress): CSS framework for styling components. It has the ability to [remove unused CSS](https://tailwindcss.com/docs/optimizing-for-production) to optimize file size and CSS processing speed of the project.
-- [Storybook](https://storybook.js.org/) (In progress): An open-source tool for developing UI components in isolation for React, Vue, and Angular.
-- [Testing Library](https://testing-library.com/) (In progress): A simple and intuitive testing library for React applications.
-- [Cypress](https://www.cypress.io/) (In progress): An end-to-end testing framework for web applications.
+- [x] [Next.js](https://nextjs.org/): A React framework for building server-side rendered and static web applications.
+- [x] [TypeScript](https://www.typescriptlang.org) (`.ts` files): A statically typed superset of JavaScript that enhances code quality and developer productivity.
+- [x] [Tailwind](https://tailwindcss.com): CSS framework for styling components. It has the ability to [remove unused CSS](https://tailwindcss.com/docs/optimizing-for-production) to optimize file size and CSS processing speed of the project.
+- [ ] [Storybook](https://storybook.js.org/) (In progress): An open-source tool for developing UI components in isolation for React, Vue, and Angular.
+- [ ] [Testing Library](https://testing-library.com/) (In progress): A simple and intuitive testing library for React applications.
+- [ ] [Cypress](https://www.cypress.io/) (In progress): An end-to-end testing framework for web applications.
 
 ### Code Quality Tools
 
