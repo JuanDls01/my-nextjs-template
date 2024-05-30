@@ -7,9 +7,8 @@ type HomeType = {
 
 export default async function Home({ params: { lang } }: HomeType) {
   const { Home } = await getDictionary(lang);
-  console.log("Lang: ", lang);
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="container mx-auto min-h-screen">
       <h1>{Home.title}</h1>
     </main>
   );

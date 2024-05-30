@@ -1,5 +1,9 @@
 {
   "Home": {
     "title": "Hello world!"
+  },
+  "Navbar": {
+    "home": "Home",
+    "dashboard": "Dashboard"
   }
 }
