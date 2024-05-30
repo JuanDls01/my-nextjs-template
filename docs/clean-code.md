@@ -62,13 +62,13 @@ useEffect(() => {
 ✅
 
 ```js
-const buttonRef = useRef()
+const buttonRef = useRef();
 
 useEffect(() => {
-  const buttonEl = buttonRef.current
+  const buttonEl = buttonRef.current;
 
-  buttonEl.click()
-}, [])
+  buttonEl.click();
+}, []);
 ```
 
 #### Don't comment out code. Just remove
@@ -78,7 +78,7 @@ Version control exists for a reason. Leave old code in your history.
 ❌
 
 ```js
-doStuff()
+doStuff();
 // doOtherStuff();
 // doSomeMoreStuff();
 // doSoMuchStuff();
@@ -87,7 +87,7 @@ doStuff()
 ✅
 
 ```js
-doStuff()
+doStuff();
 ```
 
 #### Use as explanation of intent
@@ -98,7 +98,7 @@ doStuff()
 // This is the detection method recommended by opera
 // See https://dev.opera.com/articles/opera-mini-and-javascript/
 const isOperaMini = () =>
-  Object.prototype.toString.call(window.operamini) === '[object OperaMini]'
+  Object.prototype.toString.call(window.operamini) === "[object OperaMini]";
 ```
 
 #### Use as clarification of code
@@ -108,9 +108,9 @@ const isOperaMini = () =>
 ```js
 // Tigrinya is misspelt in the API response - see [API-1234]
 const mapServiceToProducer = (service) => {
-  if (service === 'tigrinia') return 'tigrinya'
-  return producer
-}
+  if (service === "tigrinia") return "tigrinya";
+  return producer;
+};
 ```
 
 #### Use as warning of consequences
@@ -119,14 +119,14 @@ const mapServiceToProducer = (service) => {
 
 ```js
 // Changing this is risky
-const CDN_URL = 'https://cdn.bbc.com'
+const CDN_URL = "https://cdn.bbc.com";
 ```
 
 ✅
 
 ```js
 // Changes here will need replicated to the content security policy
-const CDN_URL = 'https://cdn.bbc.com'
+const CDN_URL = "https://cdn.bbc.com";
 ```
 
 ## Functions
@@ -143,42 +143,42 @@ Small functions are easier to understand. Ideally a function should do just one 
 
 ```js
 const getPromoData = (data) => {
-  const { assetType } = data
+  const { assetType } = data;
   const headline =
-    assetType === 'PODCAST' ? episode.name : data.headlines.headline
+    assetType === "PODCAST" ? episode.name : data.headlines.headline;
   const url =
-    assetType === 'PODCAST'
-      ? data.url.replace('https://bbc.com/', '/')
-      : data.locators.assetUri
+    assetType === "PODCAST"
+      ? data.url.replace("https://bbc.com/", "/")
+      : data.locators.assetUri;
 
-  return { headline, url }
-}
+  return { headline, url };
+};
 ```
 
 ✅
 
 ```js
-const getAssetType = ({ assetType }) => assetType
+const getAssetType = ({ assetType }) => assetType;
 
-const isPodcast = (data) => getAssetType(data) === 'PODCAST'
+const isPodcast = (data) => getAssetType(data) === "PODCAST";
 
-const getPodcastEpisodeName = ({ episode }) => episode.name
+const getPodcastEpisodeName = ({ episode }) => episode.name;
 
-const getArticleHeadline = ({ headlines }) => headlines.headline
+const getArticleHeadline = ({ headlines }) => headlines.headline;
 
 const convertBbcUrlToRelativePath = (url) =>
-  url.replace('https://bbc.com/', '/')
+  url.replace("https://bbc.com/", "/");
 
 const getPodcastEpisodePath = ({ episode }) =>
-  convertBbcUrlToRelativePath(episode.url)
+  convertBbcUrlToRelativePath(episode.url);
 
-const getArticleUrl = ({ locators }) => locators.assetUri
+const getArticleUrl = ({ locators }) => locators.assetUri;
 
 const getPromoTitle = (data) =>
-  isPodcast(data) ? getPodcastEpisodeName(data) : getArticleHeadline(data)
+  isPodcast(data) ? getPodcastEpisodeName(data) : getArticleHeadline(data);
 
 const getPromoUrl = (data) =>
-  isPodcast(data) ? getPodcastEpisodePath(data) : getArticleUrl(data)
+  isPodcast(data) ? getPodcastEpisodePath(data) : getArticleUrl(data);
 ```
 
 #### Have fewer function arguments
@@ -200,7 +200,7 @@ function createMenu(title, body, buttonText, cancellable) {
   // ...
 }
 
-createMenu('Foo', 'Bar', 'Baz', true)
+createMenu("Foo", "Bar", "Baz", true);
 ```
 
 ✅
@@ -231,7 +231,7 @@ const makeBooking = (customer, isPremium) => {
   } else {
     // logic for regular booking
   }
-}
+};
 ```
 
 ✅
@@ -239,11 +239,11 @@ const makeBooking = (customer, isPremium) => {
 ```js
 const makeRegularBooking = (customer) => {
   // logic for regular booking
-}
+};
 
 const makePremiumBooking = (customer) => {
   // logic for premium booking
-}
+};
 ```
 
 #### Write pure functions
@@ -256,17 +256,17 @@ Pure functions are also extremely independent meaning they are easy to move arou
 
 ```js
 // Modifies argument
-const getLastElement = (data) => data.pop()
+const getLastElement = (data) => data.pop();
 
 // Accesses external data, so not guaranteed to return the same result for the same arguments
-const externalVariable = [1, 2, 3]
-const getLastElement = () => externalVariable[externalVariable.length - 1]
+const externalVariable = [1, 2, 3];
+const getLastElement = () => externalVariable[externalVariable.length - 1];
 ```
 
 ✅
 
 ```js
-const getLastElement = (data) => data[data.length - 1]
+const getLastElement = (data) => data[data.length - 1];
 ```
 
 #### Use consistent names
@@ -275,17 +275,17 @@ Avoid using different names to indicate the same concept. For example: get, fetc
 ❌
 
 ```js
-getArticles()
-fetchUsers()
-retrievePages()
+getArticles();
+fetchUsers();
+retrievePages();
 ```
 
 ✅
 
 ```js
-getArticles()
-getUsers()
-getPages()
+getArticles();
+getUsers();
+getPages();
 ```
 
 #### Follow standard conventions

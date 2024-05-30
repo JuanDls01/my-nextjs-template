@@ -1,9 +1,9 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 const navbarLinks = [
-  { href: '/', title: 'Home' },
-  { href: '/dashboard', title: 'Dashboard' },
-]
+  { href: "/", title: "Home" },
+  { href: "/dashboard", title: "Dashboard" },
+];
 
 const Navbar = () => {
   return (
@@ -17,6 +17,6 @@ const Navbar = () => {
         ))}
       </ul>
     </nav>
-  )
-}
-export default Navbar
+  );
+};
+export default Navbar;
