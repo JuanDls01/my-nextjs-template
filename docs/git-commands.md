@@ -1,6 +1,6 @@
 # Git usefull commands
 
-Git usernames[https://github.com/JuanDls01/my-nextjs-template/blob/main/docs/git-commands.md#git-usernames]
+[Git usernames](https://github.com/JuanDls01/my-nextjs-template/blob/main/docs/git-commands.md#git-usernames)
 
 ## Git usernames
 
